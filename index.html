@@ -3,25 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VeloGPS</title>
+    <title>VeloGPS — Handheld GPS for your iPhone</title>
+    <meta name="description" content="VeloGPS turns your iPhone into a full handheld GPS. Precise coordinates, barometric altitude, compass, waypoints, track recording, and GPX export.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1d1d1f; background: #fff; padding: 2rem 1.5rem; max-width: 640px; margin: 0 auto; text-align: center; }
-        h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-        .tagline { color: #6e6e73; margin-bottom: 2.5rem; font-size: 1.125rem; }
-        .links { display: flex; flex-direction: column; gap: 1rem; align-items: center; }
-        a { color: #007aff; font-size: 1.125rem; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .copyright { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5; color: #6e6e73; font-size: 0.8rem; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1d1d1f; background: #fff; padding: 2rem 1.5rem; max-width: 720px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2.5rem; }
+        h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+        .tagline { color: #6e6e73; font-size: 1.125rem; margin-bottom: 1.5rem; }
+        .intro { color: #333; margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+        p { margin-bottom: 1rem; color: #333; }
+        ul { margin: 0 0 1rem 1.25rem; color: #333; }
+        li { margin-bottom: 0.35rem; }
+        nav { text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5; }
+        nav a { color: #007aff; font-size: 1rem; text-decoration: none; margin: 0 0.75rem; }
+        nav a:hover { text-decoration: underline; }
+        .copyright { text-align: center; margin-top: 1.5rem; color: #6e6e73; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <h1>VeloGPS</h1>
-    <p class="tagline">GPS Position, Speed &amp; Altitude</p>
-    <div class="links">
+    <header>
+        <h1>VeloGPS</h1>
+        <p class="tagline">Handheld GPS for your iPhone</p>
+    </header>
+
+    <p class="intro">VeloGPS turns your iPhone into a full handheld GPS. Precise coordinates, barometric altitude, compass, waypoints, track recording, and GPX export — everything a dedicated GPS unit does, on the device you already carry. Built for hiking, cycling, kayaking, sailing, skiing, backcountry travel, geocaching, and anything else you'd reach for a handheld for.</p>
+
+    <h2>Live GPS Dashboard</h2>
+    <p>See coordinates, speed, altitude, course, compass heading, and barometric pressure on one screen. Pick the reading you care about most and see everything else in a secondary grid. Coordinates display in DD, DMS, or UTM.</p>
+
+    <h2>Track Recording &amp; GPX Export</h2>
+    <p>Record your route with a single tap. Tracks auto-pause when you stop and resume the moment you move again, so distance and elevation gain reflect what you actually did. Saved tracks appear as colored polylines on the map and export as standard GPX files for any mapping tool.</p>
+
+    <h2>Smooth, Accurate Altitude</h2>
+    <p>A fused altimeter combines the iPhone's barometer with GPS for steady, responsive elevation — with an outlier filter that rejects physically impossible pressure spikes from tunnels, doors, and cabin-pressure changes. On iPads and devices without a barometer, GPS-only smoothing keeps the reading stable.</p>
+
+    <h2>Waypoints</h2>
+    <p>Save your current location with one tap. Tap a pin on the map to jump to details. Distance to each waypoint updates as you move.</p>
+
+    <h2>Interactive Map</h2>
+    <p>Standard, Hybrid, and Satellite views. A live accuracy circle shows your GPS precision. Tracking mode centers the map on you; a tap disengages it for free pan.</p>
+
+    <h2>Flight Mode</h2>
+    <p>A dedicated mode for aviation: GPS altitude (cabin pressure would corrupt the barometric altimeter), pre-flight checklist, and tuned filters.</p>
+
+    <h2>Live Activity &amp; Lock Screen</h2>
+    <p>Keep speed, coordinates, altitude, and distance on your Lock Screen and Dynamic Island — even when the app is in the background.</p>
+
+    <h2>Charts &amp; Session Stats</h2>
+    <p>Real-time charts for speed, altitude, and pressure with windows from 1 minute to 1 hour. Session stats show distance, elevation gain/loss, max speed, average moving speed, and current grade.</p>
+
+    <h2>Power Saver</h2>
+    <p>Extend battery on long outings. Lowers GPS update frequency, pauses the magnetometer, and auto-suspends GPS when you're stationary.</p>
+
+    <h2>GPS Signal Quality</h2>
+    <p>A color-coded toolbar indicator shows your fix quality at a glance. Tap for detailed horizontal, vertical, speed, and course accuracy — plus a Processing section showing the current altitude source (fused, GPS-only, or flight mode) and live motion activity.</p>
+
+    <h2>Flexible Units</h2>
+    <p>Coordinates in DD, DMS, or UTM. Speed in mph, km/h, or knots. Distance in imperial or metric. Pressure in kPa, hPa/mbar, inHg, or mmHg.</p>
+
+    <h2>iPhone &amp; iPad</h2>
+    <p>Tabbed navigation on iPhone, sidebar on iPad. Adapts to split-screen and slide-over. Portrait and landscape.</p>
+
+    <h2>Private by Design</h2>
+    <p>No accounts, no analytics, no servers. All data stays on your device.</p>
+
+    <nav>
         <a href="privacy.html">Privacy Policy</a>
         <a href="support.html">Support</a>
-    </div>
+    </nav>
     <p class="copyright">&copy; 2026 Aidan Stanley Marcuss. All rights reserved.</p>
 </body>
 </html>

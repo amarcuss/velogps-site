@@ -28,16 +28,41 @@
     <h2>Frequently Asked Questions</h2>
 
     <h2>Why do some values show "—"?</h2>
-    <p>A dash indicates the sensor data is unavailable. This can happen when GPS hasn't acquired a fix yet, or on devices without a barometer. Give your device a moment outdoors with a clear view of the sky.</p>
+    <p>A dash indicates the sensor data is unavailable. This can happen when GPS hasn't acquired a fix yet, or on devices without a barometer (iPad Wi-Fi, simulator). Give your device a moment outdoors with a clear view of the sky.</p>
 
     <h2>How do I keep GPS active on the Lock Screen?</h2>
     <p>Start a Live Activity by tapping the antenna icon in the toolbar, or start recording a track by tapping the record button. Either action requests "Always" location permission so the app can continue updating in the background.</p>
 
     <h2>How does track recording work?</h2>
-    <p>Tap the record button in the toolbar to start capturing your GPS track. Tap again to stop and save. Saved tracks appear as colored polylines on the map and can be managed in the Tracks tab — rename, change color, toggle visibility, or swipe to delete.</p>
+    <p>Tap the record button in the toolbar to start capturing your GPS track. Tap again to stop and save. Saved tracks appear as colored polylines on the map and can be managed in the Tracks tab — rename, change color, toggle visibility, or swipe to delete with undo.</p>
+
+    <h2>Why did my recording pause on its own?</h2>
+    <p>VeloGPS uses the iPhone's motion sensors to detect when you're stationary (at a viewpoint, stopped at a light, at a trailhead). When it does, track recording auto-pauses so you don't accumulate drift-padded distance or phantom elevation gain. Recording resumes automatically the moment you start moving again. You'll see a brief pause indication; no action is needed.</p>
+
+    <h2>How do I export a track as GPX?</h2>
+    <p>Open the Tracks tab, tap a saved track to open its detail screen, and use the share button to export a standard GPX file. From there you can AirDrop it, email it, or open it directly in any mapping tool that accepts GPX.</p>
+
+    <h2>What does the altitude source on the Quality sheet mean?</h2>
+    <p>Tap the color-coded quality indicator in the toolbar to open the GPS Signal Quality sheet. The Processing section shows how your current altitude is being calculated:</p>
+    <ul>
+        <li><strong>Fused</strong> — the iPhone's barometer is being combined with GPS for the steadiest, most responsive altitude. This is the default on iPhones.</li>
+        <li><strong>GPS only</strong> — no barometer available (iPad Wi-Fi, simulator) or the baro stream is temporarily unavailable. A short rolling average is used to keep the reading stable.</li>
+        <li><strong>Flight mode</strong> — the barometer is intentionally disabled because cabin pressure would corrupt it. Altitude comes from GPS.</li>
+    </ul>
+    <p>The Motion row directly below shows what CoreMotion currently thinks you're doing (stationary, walking, cycling, automotive). This is also what drives the auto-pause behavior during track recording.</p>
+
+    <h2>When should I use Flight Mode?</h2>
+    <p>Use Flight Mode in a pressurized aircraft cabin, where the cabin is kept at a lower pressure than the aircraft's true altitude. In this mode, VeloGPS ignores the barometer (which would report cabin altitude, not flight altitude) and uses GPS-derived altitude instead. A pre-flight checklist is included.</p>
+
+    <h2>How do I save battery on long outings?</h2>
+    <p>Turn on Power Saver in Settings. It lowers GPS update frequency, pauses the magnetometer (compass), and auto-suspends GPS when you're stationary. It trades a little responsiveness for significantly longer battery life, which matters on multi-hour or multi-day trips.</p>
+
+    <h2>Why does the altitude chart sometimes stay flat even though I'm moving?</h2>
+    <p>When CoreMotion detects you're stationary, VeloGPS freezes the fused altitude value to prevent spurious drift (for example, from barometric weather changes while you're stopped). It unfreezes the moment motion resumes. This keeps elevation gain accurate across stops.</p>
 
     <h2>Where is my data stored?</h2>
     <p>All data stays on your device. VeloGPS has no servers, no accounts, and no cloud sync. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+
     <p class="copyright">&copy; 2026 Aidan Stanley Marcuss. All rights reserved.</p>
 </body>
 </html>
